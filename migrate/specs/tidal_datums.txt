@@ -1,0 +1,61 @@
+Unknown
+Mean Sea Level
+Mean Low Water
+Mean Lower Low Water
+Mean High Water
+Mean Higher High Water
+Mean Lower High Water
+Mean Higher Low Water
+Mean Low Water Springs
+Mean Lower Low Water Springs
+Mean Low Water Neaps
+Mean High Water Neaps
+Mean High Water Springs
+Mean Higher High Water Springs
+Indian Spring Low Water
+Equatorial Spring Low Water
+Lowest Normal Low Water
+Lowest Low Water
+Lowest Possible Low Water
+Lowest Astronomical Tide
+International Great Lakes Datum(1955)
+Lower Low Water, Large Tide
+Lowest Normal Tide
+Higher High Water, Large Tide
+Mean Water Level
+Higher High Water, Mean Tide
+Lower Low Water, Mean Tide
+Mean Tide Level
+World Geodetic System (1984)
+National Geodetic Vertical Datum
+Gulf Coast Low Water Datum
+Approximate Level of Mean Sea Level
+Approximate Level of Mean Low Water
+Approximate Level of Mean Lower Low Water
+Approximate Level of Mean High Water
+Approximate Level of Mean Higher High Water
+Approximate Level of Mean Lower High Water
+Approximate Level of Mean Higher Low Water
+Approximate Level of Mean Low Water Springs
+Approximate Level of Mean Lower Low Water Springs
+Approximate Level of Mean Low Water Neaps
+Approximate Level of Mean High Water Neaps
+Approximate Level of Mean High Water Springs
+Approximate Level of Mean Higher High Water Springs
+Approximate Level of Indian Spring Low Water
+Approximate Level of Equatorial Spring Low Water
+Approximate Level of Lowest Normal Low Water
+Approximate Level of Lowest Low Water
+Approximate Level of Lowest Possible Low Water
+Approximate Level of Lowest Astronomical Tide
+Approximate Level of International Great Lakes Datum (1955)
+Approximate Level of Lower Low Water, Large Tide
+Approximate Level of Lowest Normal Tide
+Approximate Level of Higher High Water, Large Tide
+Approximate Level of Mean Water Level
+Approximate Level of Higher High Water, Mean Tide
+Approximate Level of Lower Low Water, Mean Tide
+Approximate Level of Mean Tide Level
+Approximate Level of World Geodetic System (1984)
+Approximate Level of National Geodetic Vertical Datum
+Approximate Level of Gulf Coast Low Water Datum

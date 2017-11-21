@@ -1,0 +1,31 @@
+
+
+<%= @station.name %>
+<%= @station.country %>
+
+
+<div class="table-responsive">
+  <table class="table table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amplitude</th>
+      <th>Phase</th>
+      <th>Definition</th>
+      <th>Speed</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @station.constants.each do |constant| %>
+      <tr>
+        <td><%= constant.name %></td>
+        <td><%= constant.amp %></td>
+        <td><%= constant.phase %></td>
+        <td><%= constant.constituent.definition %></td>
+        <td><%= constant.constituent.speed %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

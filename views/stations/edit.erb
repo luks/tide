@@ -1,0 +1,20 @@
+
+<form action="/stations/<%=@station.index%>/edit" method="post">
+  <%== csrf_tag %>
+  <%== render('stations/forms/_station', { locals: { station: @station } } ) %>
+  <%== render('stations/forms/_constituents', { locals: { station: @station } } ) %>
+  <%== render('stations/forms/_verbiage', { locals: { station: @station } } ) %>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :name) %> required">
+      <label for="stations_name">Station Name</label>
+      <input type="text" name="stations[name]" value="<%=station.name%>" class="form-control input-sm " id="stations_name" placeholder="Station Name">
+      <%== form_tip(:stations_name) %>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="stations_id_context">Station ID Context</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_id_context] %>"></span>
+      <input type="text" name="stations[station_id_context]" value="<%=station.station_id_context%>" class="form-control input-sm" id="stations_id_context" placeholder="Station Id Context">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="stations_id">Station ID</label>
+      <input type="text" name="stations[station_id]" value="<%=station.station_id %>" class="form-control input-sm " id="stations_id" placeholder="Station id">
+      <%== form_tip(:stations_station_id) %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group <%= form_error_class(station, :lat) %> required">
+      <label for="stations_lat">Latitude</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_lat] %>"></span>
+      <input type="text" name="stations[lat]" value="<%=station.lat %>" class="form-control input-sm" id="stations_lat" placeholder="Latitude">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group <%= form_error_class(station, :lng) %> required">
+      <label for="stations_lng">Longitude</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_lng] %>"></span>
+      <input type="text" name="stations[lng]" value="<%=station.lng %>" class="form-control input-sm" id="stations_lng" placeholder="Longitude">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group required">
+      <label for="stations_timezone">Timezone</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_timezone] %>"></span>
+      <select name="stations[timezone]" class="form-control input-sm" id="stations_timezone">
+        <% Timezone.each do |zone| %>
+            <option value="<%= zone.name %>" <%= (zone.name == station.timezone) ? "selected='selected'" : '' %> ><%= zone.name[1..-1] %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="form-group">
+      <label for="stations_country">Country</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_country] %>"></span>
+      <input type="text" name="stations[country]" value="<%=station.country %>" class="form-control input-sm" id="stations_country" placeholder="Country">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :datumkind) %> required">
+      <label for="stations_datumkind">Datum Description</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_datumkind] %>"></span>
+      <select name="stations[datumkind]" class="form-control input-sm" id="stations_datumkind">
+        <% DatumKind.each do |datum| %>
+            <option value="<%= datum.name %>" <%= (datum == station.datumkind) ? "selected='selected'" : '' %> ><%= datum.name %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <div class="form-group <%= form_error_class(station, :datum) %> required">
+      <label for="stations_meridian">Datum Value</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_datum] %>"></span>
+      <input type="text" name="stations[datum]" value="<%=station.datum %>" class="form-control input-sm" id="stations_datum" placeholder="Datum Value">
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <div class="form-group <%= form_error_class(station, :meridian) %> required">
+      <label for="stations_meridian">Meridian</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_meridian] %>"></span>
+      <input type="number" name="stations[meridian]" value="<%=station.meridian %>" class="form-control input-sm" id="stations_meridian" placeholder="Meridian">
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <div class="form-group <%= form_error_class(station, :units) %> required">
+      <label for="stations_units">Level Units</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_units] %>"></span>
+      <select name="stations[units]" class="form-control input-sm" id="stations_units">
+        <% DataSet::UNITS.each do |unit| %>
+            <option value="<%= unit %>" <%= (unit == station.units) ? "selected='selected'" : '' %> ><%= unit %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label for="stations_min_dir">Ebb Direction</label>
+  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_min_dir] %>"></span>
+  <input type="text" name="stations[min_dir]" value="<%=station.min_dir %>" class="form-control input-sm" id="stations_min_dir" placeholder="Ebb Direction">
+</div>
+
+<div class="form-group">
+  <label for="stations_max_dir">Flood Direction</label>
+  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_max_dir] %>"></span>
+  <input type="text" name="stations[max_dir]" value="<%=station.max_dir %>" class="form-control input-sm" id="stations_max_dir" placeholder="Flood Direction">
+</div>
+
+<div class="form-group required">
+  <label for="stations_restriction">Restriction</label>
+  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_restriction] %>"></span>
+  <select name="stations[restriction]" class="form-control input-sm" id="stations_restriction" >
+    <% DataSet::RESTRICTION.each do |res| %>
+        <option value="<%= res %>" <%= (res == station.restriction) ? "selected='selected'" : '' %> ><%= res %></option>
+    <% end %>
+  </select>
+</div>

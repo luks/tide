@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-2">
+    <label>Name</label> <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_name] %>"></span>
+  </div>
+  <div class="col-md-5">
+    <label>Amplitude</label> <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_amplitude] %>"></span>
+  </div>
+  <div class="col-md-5">
+    <label>Phase</label> <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_phase] %>"></span>
+  </div>
+</div>
+<% station.constants.each do |const| %>
+    <div class="row">
+      <div class="col-md-2">
+        <i><%= const.name %></i>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group <%= form_error_class(const, :amp) %>">
+          <input type="text" name="constants[<%= const.name %>][amp]" value="<%= const.amp  %>" class="form-control input-sm" placeholder="Amplitude" >
+          <input type="hidden" name="constants[<%= const.name %>][name]" value="<%= const.name  %>">
+          <input type="hidden" name="constants[<%= const.name %>][index]" value="<%= const.index  %>">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group <%= form_error_class(const, :phase) %>">
+          <input type="text" name="constants[<%= const.name %>][phase]" value="<%= const.phase %>" class="form-control input-sm" placeholder="Phase" >
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% Constituent.exclude(name: station.constants.map(&:name)).each do |const| %>
+    <div class="row">
+      <div class="col-md-2">
+        <i><%= const.name %></i>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group <%= form_error_class(const, :amp) %>">
+          <input type="text" name="constants[<%= const.name %>][amp]" class="form-control input-sm" placeholder="Amplitude" >
+          <input type="hidden" name="constants[<%= const.name %>][name]" value="<%= const.name  %>">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group <%= form_error_class(const, :phase) %>">
+          <input type="text" name="constants[<%= const.name %>][phase]" class="form-control input-sm" placeholder="Phase" >
+        </div>
+      </div>
+    </div>
+<% end %>

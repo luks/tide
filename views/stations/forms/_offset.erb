@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :min_time_add) %> required">
+      <label for="stations_min_time_add">Minimum Time Add</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_min_time_add] %>"></span>
+      <input type="text" name="stations[min_time_add]" value="<%=station.min_time_add %>" id="stations_min_time_add" class="form-control input-sm" placeholder="Minimum Time Add">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :max_time_add) %> required">
+      <label for="stations_max_time_add">Maximum Time Add</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_max_time_add] %>"></span>
+      <input type="text" name="stations[max_time_add]" value="<%=station.max_time_add %>" id="stations_max_time_add" class="form-control input-sm" placeholder="Maximum Time Add">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :min_level_add) %> required">
+      <label for="stations_min_level_add">Minimum Time Add</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_min_level_add] %>"></span>
+      <input type="text" name="stations[min_level_add]" value="<%=station.min_level_add %>" id="stations_min_level_add" class="form-control input-sm" placeholder="Minimum Level Add">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :max_level_add) %> required">
+      <label for="stations_max_level_add">Maximum Time Add</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_max_level_add] %>"></span>
+      <input type="text" name="stations[max_level_add]" value="<%=station.max_level_add %>" id="stations_max_level_add" class="form-control input-sm" placeholder="Maximum Level Add">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :min_level_multiply) %> required">
+      <label for="stations_min_level_multiply">Minimum Level Multiply</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_min_level_multiply] %>"></span>
+      <input type="text" name="stations[min_level_multiply]" value="<%=station.min_level_multiply %>" id="stations_min_level_multiply" class="form-control input-sm" placeholder="Minimum Level Multiply">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :max_level_multiply) %> required">
+      <label for="stations_max_level_multiply">Maximum Time Multiply</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_max_level_multiply] %>"></span>
+      <input type="text" name="stations[max_level_multiply]" value="<%=station.max_level_multiply %>" id="max_level_multiply" class="form-control input-sm" placeholder="Maximum Level Multiply">
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :flood_begins) %> required">
+      <label for="stations_flood_begins">Flood Begins</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_flood_begins] %>"></span>
+      <input type="text" name="stations[flood_begins]" value="<%=station.flood_begins %>" id="stations_flood_begins" class="form-control input-sm" placeholder="Flood Begins">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :ebb_begins) %> required">
+      <label for="stations_ebb_begins">Ebb Begins</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_ebb_begins] %>"></span>
+      <input type="text" name="stations[ebb_begins]" value="<%=station.ebb_begins %>" id="stations_ebb_begins" class="form-control input-sm" placeholder="Maximum Level Multiply">
+    </div>
+  </div>
+</div>

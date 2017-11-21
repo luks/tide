@@ -1,0 +1,20 @@
+<table class="table table-striped table-condensed" >
+  <tr>
+    <th>#</th>
+    <th>Name <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_name] %>"></span></th>
+    <th>Amplitude <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_amplitude] %>"></span></th>
+    <th>Phase <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_phase] %>"></span></th>
+    <th>Speed <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_speed] %>"></span></th>
+    <th>Definition <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_definition] %>"></span></th>
+  </tr>
+  <% @station.constants_dataset.reverse(:amp).each_with_index do |constant, i| %>
+      <tr>
+        <td><%= i+1 %></td>
+        <td><%= constant.name %></td>
+        <td><input type="text" name="constants[<%= constant.name %>][amp]" value="<%= constant.amp %>" class="form-control input-sm" id="stations_date_imported" ></td>
+        <td><input type="text" name="constants[<%= constant.name %>][phase]" value="<%= constant.phase %>" class="form-control input-sm" id="stations_date_imported" ></td>
+        <td><%= constant.constituent.speed %></td>
+        <td><%= constant.constituent.definition %></td>
+      </tr>
+  <% end %>
+</table>

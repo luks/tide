@@ -1,0 +1,70 @@
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#general">General</a></li>
+  <li class="disabled"><a data-toggle="tab" href="#verbiage">Verbiage</a></li>
+  <li class="disabled"><a data-toggle="tab" href="#constituents">Constituents</a></li>
+</ul>
+
+
+<div class="tab-content">
+  <div id="general" class="tab-pane fade in active">
+    <h3></h3>
+    <div class="row">
+      <div class="col-md-6">
+        <form action="/stations/new" method="post">
+          <%== csrf_tag %>
+          <%== render('stations/forms/_station', { locals: { station: @station} }) %>
+          <input type="hidden" name="stations[datum]" value="0" >
+          <input type="hidden" name="stations[meridian]" value="0" >
+          <button type="submit" class="btn btn-default fixed">Save and continue</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div id="map-general">This is a map</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+    var map;
+
+    var newStation = new L.LayerGroup();
+
+    var locationMarkerOptions = {
+        radius: 8,
+        fillColor: "#fff",
+        color: "#ff0000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    map_tiles = new L.tileLayer('http://localhost/osm_tiles/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        minZoom: 5
+    });
+
+    map = new L.Map('map-general', {
+        center: new L.LatLng(42.68158, 18.25856),
+        zoom: 7,
+        layers: [map_tiles, newStation]
+    });
+
+    map.on('click', function(e) {
+        fillCooridinates(e);
+    });
+
+
+    function fillCooridinates(e) {
+        var markerLocation = new L.LatLng(e.latlng.lat, e.latlng.lng);
+        var marker = new L.circleMarker(markerLocation, locationMarkerOptions);
+        newStation.clearLayers();
+        newStation.addLayer(marker);
+        $("#stations_lat").val(e.latlng.lat);
+        $("#stations_lng").val(e.latlng.lng);
+    }
+
+    map.invalidateSize();
+
+
+</script>

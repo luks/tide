@@ -1,0 +1,20 @@
+<table class="table table-striped table-condensed" >
+  <tr>
+    <th>#</th>
+    <th>Alias</th>
+    <th>Format</th>
+    <th>Name <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_name] %>"></span></th>
+    <th>Speed <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_speed] %>"></span></th>
+    <th>Definition <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:constants_definition] %>"></span></th>
+  </tr>
+  <% @constituents.each_with_index do |constituent, i| %>
+      <tr>
+        <td><%= i+1 %></td>
+        <td><%= constituent.name %></td>
+        <td><%= constituent[:alias] %></td>
+        <td><%= constituent[:format] %></td>
+        <td><%= constituent.speed %></td>
+        <td><%= constituent.definition %></td>
+      </tr>
+  <% end %>
+</table>
