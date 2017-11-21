@@ -1,6 +1,6 @@
 Todo:
-Html forms
-Upload file and parse: water levels
-Validation in models
-Patch congen add functionality to fetch response in varius format
-Patch libtcd - validate constants in constant out validation response
+Html forms.
+Upload water levels and parse. 
+Validation in models.
+Patch congen add functionality to fetch response in varius format.
+Patch libtcd - validate constants in constant out validation response.
