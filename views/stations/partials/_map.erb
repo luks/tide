@@ -1,0 +1,54 @@
+<script>
+
+  var map;
+
+  var newStation = new L.LayerGroup();
+
+  var locationMarkerOptions = {
+    radius: 8,
+    fillColor: "#fff",
+    color: "#ff0000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+  };
+
+  map_tiles = new L.tileLayer('http://localhost/osm_tiles/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    minZoom: 5
+  });
+
+
+  map = new L.Map('map-general', {
+    center: new L.LatLng(42.68158, 18.25856),
+    zoom: 7,
+    layers: [map_tiles, newStation]
+  });
+
+  map.on('click', function(e) {
+    fillCooridinates(e);
+  });
+
+  <% if station.lng && station.lat %>
+    addMarker(<%= station.lat %>, <%= station.lng %> )
+  <% end %>
+
+  function addMarker(lat, lng) {
+      var markerLocation = new L.LatLng(lat, lng);
+      var marker = new L.circleMarker(markerLocation, locationMarkerOptions);
+      newStation.clearLayers();
+      newStation.addLayer(marker);
+  }
+
+  function fillCooridinates(e) {
+    var markerLocation = new L.LatLng(e.latlng.lat, e.latlng.lng);
+    var marker = new L.circleMarker(markerLocation, locationMarkerOptions);
+    newStation.clearLayers();
+    newStation.addLayer(marker);
+    $("#stations_lat").val(e.latlng.lat);
+    $("#stations_lng").val(e.latlng.lng);
+  }
+
+map.invalidateSize();
+
+</script>

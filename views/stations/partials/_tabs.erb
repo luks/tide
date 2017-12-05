@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/general">General</a></li>
+    <% if station.is_reference? %>
+      <li class="disabled"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/constituents">Constituents</a></li>
+    <% end %>
+    <% if station.is_subordinate? %>
+        <li class="disabled"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/offset">Offset</a></li>
+    <% end %>
+  <li class="disabled"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/verbiage">Verbiage</a></li>
+</ul>

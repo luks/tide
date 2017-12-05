@@ -1,5 +1,4 @@
 class DataSet < Sequel::Model
-
   plugin :nested_attributes
 
   one_to_many :constants, key: :index
@@ -9,7 +8,7 @@ class DataSet < Sequel::Model
   nested_attributes :constants
 
   many_to_many :constituents, left_key: :index, right_key: :name,
-                  join_table: :constants
+                              join_table: :constants
 
   UNITS = %w(meters feet knots knots^2).freeze
 
@@ -47,6 +46,13 @@ class DataSet < Sequel::Model
 
     validates_operator(:<, 360, :max_dir) if max_dir.is_a?(Float)
     validates_operator(:>=, 0.0, :max_dir) if max_dir.is_a?(Float)
+  end
 
+  def is_reference?
+    ref_index.nil?
+  end
+
+  def is_subordinate?
+    !is_reference?
   end
 end

@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+  <li class=""><a data-toggle="ta" href="/stations/<%=@station.index%>/edit/general#general">General</a></li>
+  <li class="active"><a data-toggle="ta" href="#offset">Offset</a></li>
+  <li class=""><a data-toggle="ta" href="/stations/<%=@station.index%>/edit/verbiage##verbiage">Verbiage</a></li>
+</ul>
+
+<h3></h3>
+
+
+<form action="/stations/edit" method="post">
+  <input type="hidden" name="type" value="offset" />
+  <input type="hidden" name="index" value="<%= @station.index %>" />
+
+  <%== csrf_tag %>
+
+  <% if @station.is_subordinate? %>
+      <%== render('stations/forms/_offset', { locals: { station: @station } } ) %>
+  <% end %>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+
+</form>

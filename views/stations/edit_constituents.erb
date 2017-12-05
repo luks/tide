@@ -1,0 +1,31 @@
+<ul class="nav nav-tabs">
+  <li class=""><a data-toggle="tab" href="#general">General</a></li>
+  <li class="active"><a data-toggle="tab" href="#constituents">Constituents</a></li>
+  <li class=""><a data-toggle="tab" href="#verbiage">Verbiage</a></li>
+</ul>
+
+<h3></h3>
+<div class="row">
+  <form action="/stations/edit" method="post">
+    <div class="col-md-6">
+        <input type="hidden" name="type" value="constituents" />
+        <input type="hidden" name="index" value="<%= @station.index %>" />
+        <%== csrf_tag %>
+        <% if @station.is_reference? %>
+            <%== render('stations/forms/_constituents', { locals: { station: @station } } ) %>
+        <% end %>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+    <div class="col-md-6">
+      <div class="container">
+        <div data-role="dynamic-fields">
+          <% @station.constants.each do |const| %>
+            <%== render('stations/forms/_constant', { locals: { station: @station, constant: const } } ) %>
+          <% end %>
+          <%== render('stations/forms/_constant', { locals: { station: @station, constant: Constant.new } } ) %>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+

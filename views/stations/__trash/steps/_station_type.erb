@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :ref_index) %>">
+      <label for="stations_ref_index">Reference station</label>
+      <%== help_tooltip(:stations_ref_index) %>
+      <select name="stations[ref_index]" class="form-control input-sm" id="stations_ref_index" >
+        <option value="">--</option>
+        <% @ref_stations.each do |res| %>
+            <option value="<%= res.index %>" <%= (res.index == station.ref_index) ? "selected='selected'" : '' %> ><%= res.name %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+</div>

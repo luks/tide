@@ -1,23 +1,27 @@
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :name) %> required">
       <label for="stations_name">Station Name</label>
       <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_name] %>"></span>
       <input type="text" name="stations[name]" value="<%=station.name%>" class="form-control input-sm " id="stations_name" placeholder="Station Name">
+      <%== form_error_message(station, :name) %>
     </div>
   </div>
-  <div class="col-md-4">
-    <div class="form-group <%= form_error_class(station, :units) %> required">
-      <label for="stations_units">Level Units</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_units] %>"></span>
-      <select name="stations[units]" class="form-control input-sm" id="stations_units">
-        <% DataSet::UNITS.each do |unit| %>
-            <option value="<%= unit %>" <%= (unit == station.units) ? "selected='selected'" : '' %> ><%= unit %></option>
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :ref_index) %>">
+      <label for="stations_ref_index">Reference Station</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_ref_index] %>"></span>
+      <select name="stations[ref_index]" class="form-control input-sm" id="stations_ref_index">
+        <option value="">--</option>
+        <% @ref_stations.each do |res| %>
+            <option value="<%= res.index %>" <%= (res.index == station.ref_index) ? "selected='selected'" : '' %> ><%= res.name %></option>
         <% end %>
       </select>
+      <%== form_error_message(station, :ref_index) %>
     </div>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-6">
     <div class="form-group">
@@ -40,12 +44,14 @@
     <div class="form-group <%= form_error_class(station, :lat) %> required">
       <label for="stations_lat">Latitude</label>
       <input type="text" name="stations[lat]" value="<%=station.lat %>" class="form-control input-sm" id="stations_lat" placeholder="Latitude">
+      <%== form_error_message(station, :lat) %>
     </div>
   </div>
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :lng) %> required">
       <label for="stations_lng">Longitude</label>
       <input type="text" name="stations[lng]" value="<%=station.lng %>" class="form-control input-sm" id="stations_lng" placeholder="Longitude">
+      <%== form_error_message(station, :lng) %>
     </div>
   </div>
 </div>
@@ -55,6 +61,7 @@
     <div class="form-group required">
       <label for="stations_timezone">Timezone</label>
       <select name="stations[timezone]" class="form-control input-sm" id="stations_timezone">
+        <option value="">Unknown</option>
         <% Timezone.each do |zone| %>
             <option value="<%= zone.name %>" <%= (zone.name == station.timezone) ? "selected='selected'" : '' %> ><%= zone.name[1..-1] %></option>
         <% end %>
@@ -86,7 +93,19 @@
     </div>
   </div>
 </div>
+
 <div class="row">
+  <div class="col-md-6">
+    <div class="form-group <%= form_error_class(station, :units) %> required">
+      <label for="stations_units">Level Units</label>
+      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_units] %>"></span>
+      <select name="stations[units]" class="form-control input-sm" id="stations_units">
+        <% DataSet::UNITS.each do |unit| %>
+            <option value="<%= unit %>" <%= (unit == station.units) ? "selected='selected'" : '' %> ><%= unit %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
   <div class="col-md-6">
     <div class="form-group required">
       <label for="stations_restriction">Restriction</label>

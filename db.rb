@@ -14,4 +14,7 @@ TIPS = {
   stations_id_context: 'This is the context of the Station ID.',
   stations_units: 'Select feet or meters for tides, knots for currents.',
   stations_datumkind: 'Choose Mean Lower Low Water or whatever is the description of the datum that you have received.',
+  help_reference_station: 'A tide station whose predictions trace directly to harmonic constants that were derived from water level readings for that same station is called a reference station.',
+  stations_ref_index: 'A tide station whose predictions trace directly to harmonic constants that were derived from water level readings for that same station is called a reference station.',
+  help_subordinate_station: 'A subordinate station is a tide station whose predictions are obtained by applying corrections to the predictions generated for a reference station.'
 }.freeze
