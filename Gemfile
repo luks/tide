@@ -1,19 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rack_csrf'
-gem 'tilt', '>= 2'
 gem 'erubi'
+gem 'rack-unreloader'
+gem 'rack_csrf'
 gem 'roda', '>= 3'
 gem 'sequel', '>= 5'
 gem 'sequel_pg'
-gem 'rack-unreloader'
+gem 'tilt', '>= 2'
 
 gem 'capybara'
+gem 'forme'
 gem 'minitest', '>= 5.7.0'
 gem 'minitest-hooks', '>= 1.1.0'
-gem 'forme'
-
+gem 'will_paginate'
 
 # development
-gem 'pry'
 gem 'autoforme'
+gem 'pry'

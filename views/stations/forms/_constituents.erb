@@ -2,19 +2,21 @@
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :datumkind) %> required">
       <label for="stations_datumkind">Datum Description</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_datumkind] %>"></span>
+      <%== help_tooltip(:stations_datumkind) %>
         <select name="stations[datumkind]" class="form-control input-sm" id="stations_datumkind">
           <% DatumKind.each do |datum| %>
             <option value="<%= datum.name %>" <%= (datum.name == station.datumkind) ? "selected='selected'" : '' %> ><%= datum.name %></option>
         <% end %>
       </select>
+      <%== form_error_message(station, :datumkind) %>
     </div>
   </div>
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :datum) %> required">
       <label for="stations_meridian">Datum Value</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_datum] %>"></span>
+      <%== help_tooltip(:stations_datum) %>
       <input type="text" name="stations[datum]" value="<%=station.datum %>" class="form-control input-sm" id="stations_datum" placeholder="Datum Value">
+      <%== form_error_message(station, :datum) %>
     </div>
   </div>
 </div>
@@ -23,19 +25,21 @@
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :units) %> required">
       <label for="stations_units">Level Units</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_units] %>"></span>
+      <%== help_tooltip(:stations_units) %>
       <select name="stations[units]" class="form-control input-sm" id="stations_units">
         <% DataSet::UNITS.each do |unit| %>
             <option value="<%= unit %>" <%= (unit == station.units) ? "selected='selected'" : '' %> ><%= unit %></option>
         <% end %>
       </select>
+      <%== form_error_message(station, :units) %>
     </div>
   </div>
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :meridian) %> required">
       <label for="stations_meridian">Meridian</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_meridian] %>"></span>
+      <%== help_tooltip(:stations_meridian) %>
       <input type="number" name="stations[meridian]" value="<%=station.meridian || 0 %>" class="form-control input-sm" id="stations_meridian" placeholder="Meridian">
+      <%== form_error_message(station, :meridian) %>
     </div>
   </div>
 </div>
@@ -43,17 +47,19 @@
 <div class="row">
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :months_on_station) %>">
-      <label for="stations_meridian">Months On Stations</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_months_on_station] %>"></span>
+      <label for="stations_month_on_station">Months On Stations</label>
+      <%== help_tooltip(:stations_months_on_station) %>
       <input type="number" name="stations[months_on_station]" value="<%=station.months_on_station %>" class="form-control input-sm" id="stations_months_on_station" placeholder="Months on station">
+      <%== form_error_message(station, :months_on_station) %>
     </div>
   </div>
 
   <div class="col-md-6">
     <div class="form-group <%= form_error_class(station, :last_date_on_station) %>">
       <label for="stations_meridian">Last Date On Station</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_last_date_on_station] %>"></span>
+      <%== help_tooltip(:stations_last_date_on_station) %>
       <input type="date" name="stations[last_date_on_station]" value="<%=station.last_date_on_station %>" class="form-control input-sm" id="stations_last_date_on_station" placeholder="Last Date ON Station">
+      <%== form_error_message(station, :last_date_on_station) %>
     </div>
   </div>
 </div>

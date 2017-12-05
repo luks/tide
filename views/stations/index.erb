@@ -1,4 +1,9 @@
-
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Stations</li>
+  </ol>
+</nav>
 
 <div class="table-responsive">
   <table class="table table-striped table-condensed table-hover">
@@ -24,6 +29,7 @@
 
     </tbody>
   </table>
+  <%== will_paginate @stations %>
 </div>
 
 

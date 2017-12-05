@@ -1,15 +1,17 @@
 <div class="form-inline">
   <div class="form-group <%= form_error_class(constant, :name) %>">
-    <% if constant.new? %>
+    <% if select_constituents %>
       <select name="constants[][name]" class="form-control input-sm input-sel-sm" >
-        <% Constituent.each do |const| %>
+        <% Constituent.exclude(name: station.constants.map(&:name)).each do |const| %>
           <option value="<%= const.name %>" <%= (const.name == constant.name) ? "selected='selected'" : '' %> ><%= const.name %></option>
         <% end %>
       </select>
     <% else %>
       <input name="constants[][name]" class="form-control input-sm" value="<%= constant.name %>" disabled="disabled">
       <input type="hidden" name="constants[][name]" value="<%= constant.name %>"/>
-      <input type="hidden" name="constants[][index]" value="<%= constant.index %>"/>
+      <% unless constant.new? %>
+        <input type="hidden" name="constants[][index]" value="<%= constant.index %>"/>
+      <% end %>
     <% end %>
   </div>
   <div class="form-group <%= form_error_class(constant, :amp) %>">
@@ -20,10 +22,10 @@
     <input type="text" name="constants[][phase]" class="form-control input-sm" placeholder="Phase" value="<%= constant.phase  %>" />
   </div>
 
-  <button class="btn btn-danger btn-sm" data-role="remove">
+  <button class="btn btn-info btn-sm" data-role="remove">
     <span class="glyphicon glyphicon-remove"></span>
   </button>
-  <button class="btn btn-primary btn-sm" data-role="add">
+  <button class="btn btn-success btn-sm" data-role="add">
     <span class="glyphicon glyphicon-plus"></span>
   </button>
 </div>

@@ -7,6 +7,9 @@ class Constant < Sequel::Model
 
   def validate
     super
+
+    validates_unique([:name, :index])
+
     validates_presence :amp
     validates_presence :phase
 

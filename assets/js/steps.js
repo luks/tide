@@ -22,4 +22,8 @@ $(function() {
             container.append(new_field_group);
         }
     );
+
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
 });

@@ -5,7 +5,7 @@ class DataSet < Sequel::Model
   one_to_many :stations, key: :ref_index, class: self
   many_to_one :ref_station, key: :ref_index, class: self
 
-  nested_attributes :constants
+  nested_attributes :constants, destroy: true
 
   many_to_many :constituents, left_key: :index, right_key: :name,
                               join_table: :constants

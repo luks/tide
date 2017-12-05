@@ -21,7 +21,7 @@ module Helpers
     end
 
     def help_tooltip(index)
-      "<span class=\"glyphicon glyphicon-info-sign text-info\" data-toggle=\"tooltip\" title=\"#{TIPS[index]}\"/></span>"
+      "<span class=\"glyphicon glyphicon-question-sign text-default\" data-toggle=\"popover\" data-content=\"#{TIPS[index]}\"/></span>"
     end
   end
 end

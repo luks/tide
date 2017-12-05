@@ -1,6 +1,9 @@
 require_relative 'models'
 require 'roda'
 require 'pry'
+require 'will_paginate'
+require 'will_paginate/view_helpers'
+require 'will_paginate/sequel'
 
 class Tide < Roda
 
@@ -29,10 +32,12 @@ class Tide < Roda
 
   compile_assets
 
-  Unreloader.require('routes') {}
   Unreloader.require('lib') {}
+  Unreloader.require('routes') {}
   Unreloader.require('helpers') {}
   include Helpers::FormHelpers
+
+  plugin :will_paginate, renderer: :bootstrap
 
   route do |r|
     r.assets

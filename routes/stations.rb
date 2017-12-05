@@ -2,7 +2,7 @@ class Tide
   route 'stations' do |r|
     r.is do
       @page = (params[:page] || 1).to_i
-      @stations = DataSet.exclude(datum: nil).reverse(:index).paginate(@page, 100)
+      @stations = DataSet.exclude(datum: nil).reverse(:index).paginate(@page, 20)
 
       r.get do
         view 'stations/index'
@@ -43,11 +43,20 @@ class Tide
           type = params[:type]
           @station.set(params[:stations])
           if params[:constants]
+            # remove empty
             cons_params = params[:constants].delete_if do |x|
               x[:amp].empty? && x[:phase].empty?
             end
+            # remove duplicated inputs
+            cons_params.uniq! { |h| h[:name] }
+            # delete non existing records
+            stat_const = @station.constants.map(&:name)
+            p_const = cons_params.map { |c| c[:name] }
+            (stat_const - p_const).each do |name|
+              cons_params << { name: name, index: @station.index, _delete: true }
+            end
+            @station.set(constants_attributes: cons_params)
           end
-          @station.set(constants_attributes: cons_params)
           if @station.valid?
             flash[:success] = 'Station has been updated successfully!.'
             @station.save_changes

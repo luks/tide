@@ -1,12 +1,22 @@
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="/stations">Stations</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Constituents</li>
+  </ol>
+</nav>
+
 <ul class="nav nav-tabs">
-  <li class=""><a data-toggle="tab" href="#general">General</a></li>
-  <li class="active"><a data-toggle="tab" href="#constituents">Constituents</a></li>
-  <li class=""><a data-toggle="tab" href="#verbiage">Verbiage</a></li>
+  <li class=""><a data-toggle="ta" href="/stations/<%= @station.index %>/edit/general">General</a></li>
+  <li class="active"><a data-toggle="ta" href="#constituents">Constituents</a></li>
+  <li class=""><a data-toggle="ta" href="#verbiage">Verbiage</a></li>
 </ul>
 
 <h3></h3>
-<div class="row">
-  <form action="/stations/edit" method="post">
+
+
+<form action="/stations/edit" method="post">
+  <div class="row">
     <div class="col-md-6">
         <input type="hidden" name="type" value="constituents" />
         <input type="hidden" name="index" value="<%= @station.index %>" />
@@ -14,18 +24,49 @@
         <% if @station.is_reference? %>
             <%== render('stations/forms/_constituents', { locals: { station: @station } } ) %>
         <% end %>
-        <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default">Submit</button>
     </div>
+
     <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-4">
+            <label for="constants_name">Name</label>
+            <%== help_tooltip(:constants_name) %>
+          </div>
+          <div class="col-md-4">
+            <label for="constants_amp">Amplitude</label>
+            <%== help_tooltip(:stations_amp) %>
+          </div>
+          <div class="col-md-4">
+            <label for="constants_name">Phase</label>
+            <%== help_tooltip(:stations_phase) %>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div data-role="dynamic-fields">
+
           <% @station.constants.each do |const| %>
-            <%== render('stations/forms/_constant', { locals: { station: @station, constant: const } } ) %>
+            <%== render('stations/forms/_constant', { locals: { station: @station, constant: const, select_constituents: false } } ) %>
           <% end %>
-          <%== render('stations/forms/_constant', { locals: { station: @station, constant: Constant.new } } ) %>
+
+          <h4>Add new constants</h4>
+
+          <%== render('stations/forms/_constant', { locals: { station: @station, constant: Constant.new, select_constituents: true } } ) %>
+        </div>
+
+        <div class="row">
+          <h3></h3>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-default">Update</button>
+          </div>
         </div>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+
+
+</form>
+
 
