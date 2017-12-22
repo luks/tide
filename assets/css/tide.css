@@ -1,8 +1,43 @@
 html { height: 100% }
 body {
     height: 100%;
-    background: aliceblue;
+    #background: aliceblue;
 }
+.breadcrumb {
+    padding: 0px 0px;
+    list-style: none;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    list-style: none;
+    background-color:white;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+}
+.input-sm {
+    font-weight: bolder;
+}
+
+.form-control::-moz-placeholder {
+    color: #999999;
+    font-style: italic;
+    font-weight: lighter;
+}
+.form-control:-ms-input-placeholder {
+    color: #999999;
+    font-style: italic;
+    font-weight: lighter;
+}
+.form-control::-webkit-input-placeholder {
+    color: #999999;
+    font-style: italic;
+    font-weight: lighter;
+}
+
 #map-general { height: 400px; }
 
 .form-group.required label:after {

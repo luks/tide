@@ -55,4 +55,9 @@ class DataSet < Sequel::Model
   def is_subordinate?
     !is_reference?
   end
+
+  def have_location?
+    lng && lat
+  end
+
 end

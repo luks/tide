@@ -13,6 +13,7 @@ gem 'forme'
 gem 'minitest', '>= 5.7.0'
 gem 'minitest-hooks', '>= 1.1.0'
 gem 'will_paginate'
+gem 'shrine'
 
 # development
 gem 'autoforme'

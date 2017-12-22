@@ -81,10 +81,6 @@ class Tide
         end
       end
 
-      r.on 'test' do
-        view 'stations/test'
-      end
-
       r.on 'edit' do
         r.is 'general' do
           r.get do
@@ -116,6 +112,12 @@ class Tide
           end
         end
 
+        r.is 'water_level' do
+          r.get do
+            view 'stations/edit_water_level'
+          end
+        end
+
         r.is 'verbiage' do
           r.get do
             view 'stations/edit_verbiage'
@@ -128,27 +130,3 @@ class Tide
     end
   end
 end
-
-# if params[:constants]
-#   cons_params = params[:constants].values.delete_if do |x|
-#     x[:amp].empty? && x[:phase].empty?
-#   end
-#   @station.constants_attributes = cons_params
-# end
-#
-#   # r.post String do |redirect_to|
-#   #   cons_params = params[:constants].values.delete_if do |x|
-#   #     x[:amp].empty? && x[:phase].empty?
-#   #   end
-#   #   @station.set(params[:stations])
-#   #   @station.set(constants_attributes: cons_params)
-#   #   if @station.valid?
-#   #     flash[:success] = 'Station has been updated successfully!.'
-#   #     @station.save_changes
-#   #     r.redirect
-#   #   else
-#   #     flash.now[:error] = @station.errors.full_messages.join(', ')
-#   #     view 'stations/edit'
-#   #   end
-#   # end
-# end

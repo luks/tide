@@ -24,6 +24,15 @@ $(function() {
     );
 
     $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
+        $('[data-toggle="popover"]').popover({
+            html : true,
+            placement: 'top',
+            trigger: 'hover',
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('.select2').select2();
     });
 });

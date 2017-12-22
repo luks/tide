@@ -1,51 +1,56 @@
-<div class="form-group">
-  <label for="stations_date_imported">Date imported</label>
-  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_date_imported] %>"></span>
-  <input type="date" name="stations[date_imported]" value="<%=station.date_imported %>" class="form-control input-sm" id="stations_date_imported" placeholder="Date Imported">
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="stations_date_imported">Date imported</label>
+      <%== help_tooltip(:stations_date_imported) %>
+      <input type="date" name="stations[date_imported]" value="<%=station.date_imported %>" class="form-control input-sm" id="stations_date_imported" placeholder="Date Imported">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="stations_source">Source</label>
+      <%== help_tooltip(:stations_source) %>
+      <input type="text" name="stations[source]" value="<%=station.source %>" class="form-control input-sm" id="stations_source" placeholder="Source">
+    </div>
+  </div>
 </div>
-
-<div class="form-group">
-  <label for="stations_source">Source</label>
-  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_source] %>"></span>
-  <input type="text" name="stations[source]" value="<%=station.source %>" class="form-control input-sm" id="stations_source" placeholder="Source">
-</div>
-
 <div class="form-group">
   <label for="stations_comments">Comments</label>
-  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_comments] %>"></span>
+  <%== help_tooltip(:stations_comments) %>
   <textarea  name="stations[comments]" class="form-control input-sm" id="stations_comments" placeholder="Comments"><%=station.comments %></textarea>
 </div>
 
 <div class="form-group">
   <label for="stations_notes">Notes</label>
-  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_notes] %>"></span>
+  <%== help_tooltip(:stations_notes) %>
   <textarea  name="stations[notes]" class="form-control input-sm" id="stations_notes" placeholder="Notes"><%=station.notes %></textarea>
 </div>
 
 <div class="form-group">
-  <label for="stations_legalese">Legalese</label>
-  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_legalese] %>"></span>
-  <select name="stations[legalese]" class="form-control input-sm" id="stations_legalese" >
-    <option></option>
-    <option>IGNORE VELOCITIES</option>
-  </select>
-</div>
-
-<div class="form-group">
   <label for="stations_xfields">X-fields</label>
-  <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_xfields] %>"></span>
+  <%== help_tooltip(:stations_xfields) %>
   <textarea name="stations[xfields]" class="form-control input-sm" id="stations_xfields" placeholder="X-fields"><%=station.xfields %></textarea>
 </div>
 
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-6">
     <div class="form-group required">
       <label for="stations_restriction">Restriction</label>
-      <span class="glyphicon glyphicon-info-sign text-info" data-toggle="tooltip" title="<%= TIPS[:stations_restriction] %>"></span>
+      <%== help_tooltip(:stations_restrictions) %>
       <select name="stations[restriction]" class="form-control input-sm" id="stations_restriction" >
         <% DataSet::RESTRICTION.each do |res| %>
             <option value="<%= res %>" <%= (res == station.restriction) ? "selected='selected'" : '' %> ><%= res %></option>
         <% end %>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="stations_legalese">Legalese</label>
+      <%== help_tooltip(:stations_legalese) %>
+      <select name="stations[legalese]" class="form-control input-sm" id="stations_legalese" >
+        <option></option>
+        <option>IGNORE VELOCITIES</option>
       </select>
     </div>
   </div>

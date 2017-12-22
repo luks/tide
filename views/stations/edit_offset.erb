@@ -1,19 +1,7 @@
-<nav aria-label="breadcrumb" role="navigation">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="/stations">Stations</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Offset</li>
-  </ol>
-</nav>
-
-<ul class="nav nav-tabs">
-  <li class=""><a data-toggle="ta" href="/stations/<%=@station.index%>/edit/general#general">General</a></li>
-  <li class="active"><a data-toggle="ta" href="#offset">Offset</a></li>
-  <li class=""><a data-toggle="ta" href="/stations/<%=@station.index%>/edit/verbiage##verbiage">Verbiage</a></li>
-</ul>
+<%== render('stations/partials/_breadcrumbs', { locals: { station: @station, active: 'Offset' } } ) %>
+<%== render('stations/partials/_tabs', { locals: { station: @station, active: 'offset'  } } ) %>
 
 <h3></h3>
-
 
 <div class="row">
   <div class="col-md-6">

@@ -16,6 +16,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     coderay (1.1.2)
+    down (4.1.1)
     enum_csv (1.1.0)
     erubi (1.7.0)
     forme (1.6.0)
@@ -43,6 +44,8 @@ GEM
     sequel_pg (1.8.0)
       pg (>= 0.18.0)
       sequel (>= 4.34.0)
+    shrine (2.8.0)
+      down (~> 4.1)
     tilt (2.0.8)
     will_paginate (3.1.6)
     xpath (2.1.0)
@@ -64,6 +67,7 @@ DEPENDENCIES
   roda (>= 3)
   sequel (>= 5)
   sequel_pg
+  shrine
   tilt (>= 2)
   will_paginate
 

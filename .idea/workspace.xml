@@ -8,6 +8,8 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/../latoto/models/geometry_type.rb" />
       <change beforePath="" afterPath="$PROJECT_DIR$/../latoto/models/location_photo.rb" />
       <change beforePath="" afterPath="$PROJECT_DIR$/../latoto/views/async_upload.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/stations/edit_water_level.erb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/stations/partials/_breadcrumbs.erb" />
       <change beforePath="$PROJECT_DIR$/../latoto/Gemfile" afterPath="$PROJECT_DIR$/../latoto/Gemfile" />
       <change beforePath="$PROJECT_DIR$/../latoto/Gemfile.lock" afterPath="$PROJECT_DIR$/../latoto/Gemfile.lock" />
       <change beforePath="$PROJECT_DIR$/../latoto/Rakefile" afterPath="$PROJECT_DIR$/../latoto/Rakefile" />
@@ -27,44 +29,21 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/app.rb" afterPath="$PROJECT_DIR$/app.rb" />
       <change beforePath="$PROJECT_DIR$/assets/css/tide.css" afterPath="$PROJECT_DIR$/assets/css/tide.css" />
       <change beforePath="$PROJECT_DIR$/assets/js/steps.js" afterPath="$PROJECT_DIR$/assets/js/steps.js" />
-      <change beforePath="$PROJECT_DIR$/helpers/form_helpers.rb" afterPath="$PROJECT_DIR$/helpers/form_helpers.rb" />
-      <change beforePath="$PROJECT_DIR$/models/constant.rb" afterPath="$PROJECT_DIR$/models/constant.rb" />
+      <change beforePath="$PROJECT_DIR$/db.rb" afterPath="$PROJECT_DIR$/db.rb" />
+      <change beforePath="$PROJECT_DIR$/models.rb" afterPath="$PROJECT_DIR$/models.rb" />
       <change beforePath="$PROJECT_DIR$/models/data_set.rb" afterPath="$PROJECT_DIR$/models/data_set.rb" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.031ebd9054751634f9fc8a014911340e224eb7a8229aa9a95501615819eeaa75.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.121ed10dfd67cbab3663fdc597caff46d417b0e2530e014f26a5a4c10b078485.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.2583267d8b9aec245db267c92c6d062950e4a140feb6282d64f1d44c8caa1faf.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.33ce11b805ed385afe61d08d4a4c2d71d6d8fa430854a446be92f33604ac7b0e.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.48050c4b8d0a34ffc57e8129e00aebc88e2a1b967783323d058c7f499c47025c.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.5005c3d9a4c3bbc2d04533116a36ddf324d71089ff0e70ccd6479fa187d8a65b.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.564e730bdc4797d42eb5a52f2e7cf33ea242f0a07dda5fcc7afa996d942a98fb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.5f8f30542d94b4bfb9757e5e8d3e2bf074162f6d2494f65b811d2886b3377230.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.840a38d45f207ec1034e600eed57d5b081565efd6589381c258f9e1faaab5775.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.868f7bd59669ef94c150da06913819200bc87f7747ed588e9710f79d28f65d20.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.a4100f790e2e83432f3c8bcc205ed249b2a71bb7a1dc11c9f80cda9ee2517406.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.ab986e1c834639284e5d4b63a206d0cf95d55bd0ae97ba8723b3c108a71c97f0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.b085834d854b647571577c3c3d0e1166985c69eafb687594a4af7ea4c376f598.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.bec100a9f2468b347dd17b6d4f52ce556baf4a567e3d7b8438ada40bf09889a3.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.c443718a4ffd257dee64d75128085141625f44260d80d6037d6bf37f19748251.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.d37d816fdab49fa760ab1dabdb914ff7916e9bdce10f53bd6750fa34546d28fb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.d5b429148d5eb14932e535b921f4d53fd3d3aa2440c134cc5fb2ce824f87fee1.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.d8b3d9b6fc98ace2892096fa8400134b6c46e8f8f3e8700c399bcb9b0bc180f7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js" afterPath="$PROJECT_DIR$/lib/roda/plugins/will_paginate.rb" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.f33436ef2a4f57a40c85f0663ddd9b2d596f415cb228702a4ca32fe1de6f9073.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/assets/app.f83a6d5d07f15de979c2fc01b7747fa26483f3eba6a46c0d69cb8f4e4f5fbfeb.css" afterPath="" />
       <change beforePath="$PROJECT_DIR$/routes/stations.rb" afterPath="$PROJECT_DIR$/routes/stations.rb" />
-      <change beforePath="$PROJECT_DIR$/views/stations/constituents/new.erb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/layout.erb" afterPath="$PROJECT_DIR$/views/layout.erb" />
       <change beforePath="$PROJECT_DIR$/views/stations/edit_constituents.erb" afterPath="$PROJECT_DIR$/views/stations/edit_constituents.erb" />
       <change beforePath="$PROJECT_DIR$/views/stations/edit_general.erb" afterPath="$PROJECT_DIR$/views/stations/edit_general.erb" />
       <change beforePath="$PROJECT_DIR$/views/stations/edit_offset.erb" afterPath="$PROJECT_DIR$/views/stations/edit_offset.erb" />
+      <change beforePath="$PROJECT_DIR$/views/stations/edit_verbiage.erb" afterPath="$PROJECT_DIR$/views/stations/edit_verbiage.erb" />
       <change beforePath="$PROJECT_DIR$/views/stations/forms/_constant.erb" afterPath="$PROJECT_DIR$/views/stations/forms/_constant.erb" />
-      <change beforePath="$PROJECT_DIR$/views/stations/forms/_constants.erb" afterPath="$PROJECT_DIR$/views/stations/__trash/_constants.erb" />
-      <change beforePath="$PROJECT_DIR$/views/stations/forms/_constituents.erb" afterPath="$PROJECT_DIR$/views/stations/forms/_constituents.erb" />
-      <change beforePath="$PROJECT_DIR$/views/stations/forms/_general.erb" afterPath="$PROJECT_DIR$/views/stations/forms/_general.erb" />
-      <change beforePath="$PROJECT_DIR$/views/stations/forms/_offset.erb" afterPath="$PROJECT_DIR$/views/stations/forms/_offset.erb" />
+      <change beforePath="$PROJECT_DIR$/views/stations/forms/_verbiage.erb" afterPath="$PROJECT_DIR$/views/stations/forms/_verbiage.erb" />
       <change beforePath="$PROJECT_DIR$/views/stations/index.erb" afterPath="$PROJECT_DIR$/views/stations/index.erb" />
+      <change beforePath="$PROJECT_DIR$/views/stations/partials/_map.erb" afterPath="$PROJECT_DIR$/views/stations/partials/_map.erb" />
       <change beforePath="$PROJECT_DIR$/views/stations/partials/_tabs.erb" afterPath="$PROJECT_DIR$/views/stations/partials/_tabs.erb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,68 +56,58 @@
   <component name="ChangesViewManager" flattened_view="false" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="edit_constituents.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stations/edit_constituents.erb">
+      <file leaf-file-name="latoto.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../latoto/latoto.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_constituents.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stations/forms/_constituents.erb">
+      <file leaf-file-name="models.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../latoto/models.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="57">
+              <caret line="3" column="11" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tide.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/tide.css">
+      <file leaf-file-name="models.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_offset.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stations/forms/_offset.erb">
+      <file leaf-file-name=".env.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" column="6" lean-forward="false" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_offset.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/stations/edit_offset.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_general.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="edit_general.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/stations/edit_general.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="22" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+            <state relative-caret-position="57">
+              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/steps.css">
+      <file leaf-file-name="timezone.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/timezone.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -147,8 +116,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_verbiage.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stations/forms/_verbiage.erb">
+      <file leaf-file-name="config.ru" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.ru">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -157,21 +126,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_general.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stations/forms/_general.erb">
+      <file leaf-file-name="db.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="42" />
+            <state relative-caret-position="494">
+              <caret line="26" column="93" lean-forward="false" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_constant.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stations/forms/_constant.erb">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.ru" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../latoto/config.ru">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -214,17 +193,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/migrate/004_datumkinds.rb" />
-        <option value="$PROJECT_DIR$/migrate/005_import_datumkinkds.rb" />
-        <option value="$PROJECT_DIR$/migrate/004_tide_datums.rb" />
-        <option value="$PROJECT_DIR$/migrate/005_import_tide_datums.rb" />
         <option value="$PROJECT_DIR$/views/stations/_station_form.erb" />
         <option value="$PROJECT_DIR$/views/stations/_verbiage_form.erb" />
         <option value="$PROJECT_DIR$/views/stations/forms/_constituents.rb" />
         <option value="$PROJECT_DIR$/views/stations/_constants_form.erb" />
         <option value="$PROJECT_DIR$/views/stations/_form.erb" />
         <option value="$PROJECT_DIR$/models/constituent.rb" />
-        <option value="$PROJECT_DIR$/views/stations/forms/_verbiage.erb" />
         <option value="$PROJECT_DIR$/assets/css/steps.css" />
         <option value="$PROJECT_DIR$/views/stations/steps/_step1.erb" />
         <option value="$PROJECT_DIR$/views/stations/forms/_constants.erb" />
@@ -237,34 +211,39 @@
         <option value="$PROJECT_DIR$/views/stations/forms/_station.erb" />
         <option value="$PROJECT_DIR$/views/stations/subordinate/new.erb" />
         <option value="$PROJECT_DIR$/views/stations/steps/_general.erb" />
-        <option value="$PROJECT_DIR$/db.rb" />
         <option value="$PROJECT_DIR$/views/stations/edit.erb" />
         <option value="$PROJECT_DIR$/views/stations/partials/_map.js.erb" />
         <option value="$PROJECT_DIR$/views/stations/show.erb" />
         <option value="$PROJECT_DIR$/views/stations/new.erb" />
-        <option value="$PROJECT_DIR$/views/stations/partials/_map.erb" />
         <option value="$PROJECT_DIR$/views/stations/test.erb" />
-        <option value="$PROJECT_DIR$/views/layout.erb" />
         <option value="$PROJECT_DIR$/views/stations/constituents/new.erb" />
         <option value="$PROJECT_DIR$/models/constant.rb" />
-        <option value="$PROJECT_DIR$/models/data_set.rb" />
-        <option value="$PROJECT_DIR$/views/stations/partials/_tabs.erb" />
-        <option value="$PROJECT_DIR$/views/stations/edit_general.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app.rb" />
-        <option value="$PROJECT_DIR$/views/stations/index.erb" />
         <option value="$PROJECT_DIR$/lib/roda/plugins/will_paginate.rb" />
         <option value="$PROJECT_DIR$/lib/roda/will_paginate/bootstrap_pagination_renderer.rb" />
-        <option value="$PROJECT_DIR$/routes/stations.rb" />
-        <option value="$PROJECT_DIR$/views/stations/forms/_constant.erb" />
         <option value="$PROJECT_DIR$/views/stations/forms/_general.erb" />
-        <option value="$PROJECT_DIR$/assets/js/steps.js" />
         <option value="$PROJECT_DIR$/helpers/form_helpers.rb" />
-        <option value="$PROJECT_DIR$/views/stations/edit_constituents.erb" />
         <option value="$PROJECT_DIR$/views/stations/forms/_constituents.erb" />
-        <option value="$PROJECT_DIR$/assets/css/tide.css" />
         <option value="$PROJECT_DIR$/views/stations/forms/_offset.erb" />
+        <option value="$PROJECT_DIR$/assets/css/tide.css" />
+        <option value="$PROJECT_DIR$/views/stations/index.erb" />
+        <option value="$PROJECT_DIR$/db.rb" />
+        <option value="$PROJECT_DIR$/routes/stations.rb" />
+        <option value="$PROJECT_DIR$/views/stations/partials/_tabs.erb" />
+        <option value="$PROJECT_DIR$/views/stations/partials/_breadcrumbs.erb" />
         <option value="$PROJECT_DIR$/views/stations/edit_offset.erb" />
+        <option value="$PROJECT_DIR$/assets/js/steps.js" />
+        <option value="$PROJECT_DIR$/views/layout.erb" />
+        <option value="$PROJECT_DIR$/views/stations/forms/_constant.erb" />
+        <option value="$PROJECT_DIR$/views/stations/edit_constituents.erb" />
+        <option value="$PROJECT_DIR$/views/stations/edit_water_level.erb" />
+        <option value="$PROJECT_DIR$/views/stations/forms/_verbiage.erb" />
+        <option value="$PROJECT_DIR$/views/stations/edit_verbiage.erb" />
+        <option value="$PROJECT_DIR$/models/data_set.rb" />
+        <option value="$PROJECT_DIR$/views/stations/partials/_map.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/models.rb" />
+        <option value="$PROJECT_DIR$/views/stations/edit_general.erb" />
       </list>
     </option>
   </component>
@@ -274,11 +253,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="47" />
-    <option name="y" value="-4" />
-    <option name="width" value="1873" />
-    <option name="height" value="1084" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2037" />
+    <option name="y" value="207" />
+    <option name="width" value="1871" />
+    <option name="height" value="983" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -303,18 +282,33 @@
               <item name="tide" type="b2602c69:ProjectViewProjectNode" />
               <item name="tide" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tide" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tide" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="latoto" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/stations/forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.settings.patched" value="true" />
   </component>
   <component name="RecentsManager">
@@ -389,17 +383,32 @@
       <workItem from="1512414056433" duration="3075000" />
       <workItem from="1512423433733" duration="9473000" />
       <workItem from="1512461659240" duration="4909000" />
-      <workItem from="1512472469910" duration="16001000" />
+      <workItem from="1512472469910" duration="20214000" />
+      <workItem from="1512579973842" duration="316000" />
+      <workItem from="1512637770392" duration="1425000" />
+      <workItem from="1512665137791" duration="550000" />
+      <workItem from="1512733585471" duration="79000" />
+      <workItem from="1512859892888" duration="614000" />
+      <workItem from="1512889527366" duration="7054000" />
+      <workItem from="1512983421033" duration="786000" />
+      <workItem from="1513015406992" duration="87000" />
+      <workItem from="1513032988492" duration="2867000" />
+      <workItem from="1513063336735" duration="637000" />
+      <workItem from="1513084359050" duration="2771000" />
+      <workItem from="1513107186154" duration="2851000" />
+      <workItem from="1513156981811" duration="270000" />
+      <workItem from="1513960190790" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242664000" />
+    <option name="totallyTimeSpent" value="267186000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="-4" width="1873" height="1084" extended-state="6" />
+    <frame x="2037" y="207" width="1871" height="983" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22167487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25917807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -432,149 +441,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/stations/new.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/reference/new.erb" />
-    <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_verbiage.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/show.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/partials/_map.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/edit_verbiage.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/datatables.css" />
-    <entry file="file://$PROJECT_DIR$/assets/js/datatables.js" />
-    <entry file="file://$PROJECT_DIR$/views/stations/test.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/new.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/constants/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/constituents/_form.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/constituents/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/constants/_form.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/constants/edit.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_constituents.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_general.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-389">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_offset.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_reference.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_station_type.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/stations/__trash/steps/_subordinate.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
           <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -598,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,31 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/data_set.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/index.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,15 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="true" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,47 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="50" lean-forward="true" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/partials/_tabs.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/stations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="79" lean-forward="false" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/steps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/form_helpers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,39 +502,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/forms/_constant.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/edit_constituents.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/forms/_constituents.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/forms/_verbiage.erb">
+    <entry file="file://$PROJECT_DIR$/views/index.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/form_helpers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -750,15 +523,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/tide.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="1292">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/constants/index.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/constants/edit.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/constants/_form.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/forms/_constituents.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -766,30 +579,226 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="42" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/stations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="116" column="43" lean-forward="false" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/partials/_breadcrumbs.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="56" lean-forward="false" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/edit_constituents.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/partials/_tabs.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="144" lean-forward="false" selection-start-line="9" selection-start-column="144" selection-end-line="9" selection-end-column="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/edit_offset.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="92" lean-forward="false" selection-start-line="0" selection-start-column="92" selection-end-line="0" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="68" lean-forward="false" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/forms/_constant.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="80" lean-forward="false" selection-start-line="3" selection-start-column="80" selection-end-line="3" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/edit_water_level.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/stations/forms/_offset.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="6" lean-forward="false" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+        <state relative-caret-position="646">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/edit_verbiage.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/forms/_verbiage.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/leaflet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/steps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/data_set.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/stations/partials/_map.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/db.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/libs/image_uploader.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/libs/delete_job.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/libs/uploadJob.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/latoto.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../latoto/models.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/timezone.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.ru">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="93" lean-forward="false" selection-start-line="26" selection-start-column="93" selection-end-line="26" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/stations/edit_general.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/stations/edit_offset.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state relative-caret-position="57">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
           <folding />
         </state>
       </provider>

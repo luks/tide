@@ -18,9 +18,14 @@
     minZoom: 5
   });
 
+  <% if station.have_location? %>
+    var center = new L.LatLng(<%= station.lat %>, <%= station.lng %>);
+  <% else %>
+    var center = new L.LatLng(42.68158, 18.25856);
+  <% end %>
 
   map = new L.Map('map-general', {
-    center: new L.LatLng(42.68158, 18.25856),
+    center: center,
     zoom: 7,
     layers: [map_tiles, newStation]
   });

@@ -17,16 +17,15 @@
     </tr>
     </thead>
     <tbody>
-    <% @stations.each do |station| %>
-      <tr>
-        <td><a href="/stations/<%= station.index %>/show"><%= station.name %></a></td>
-        <td><%= station.lat %></td>
-        <td><%= station.lng %></td>
-        <td><%= station.country %></td>
-        <td><a href="/stations/<%= station.index %>/edit/general">Edit</a></td>
-      </tr>
-    <% end %>
-
+      <% @stations.each do |station| %>
+        <tr>
+          <td><a href="/stations/<%= station.index %>/show"><%= station.name %></a></td>
+          <td><%= station.lat %></td>
+          <td><%= station.lng %></td>
+          <td><%= station.country %></td>
+          <td><a href="/stations/<%= station.index %>/edit/general"><span class="glyphicon glyphicon-edit"></span></a></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
   <%== will_paginate @stations %>

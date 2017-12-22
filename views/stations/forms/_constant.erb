@@ -22,12 +22,14 @@
     <input type="text" name="constants[][phase]" class="form-control input-sm" placeholder="Phase" value="<%= constant.phase  %>" />
   </div>
 
-  <button class="btn btn-info btn-sm" data-role="remove">
-    <span class="glyphicon glyphicon-remove"></span>
-  </button>
-  <button class="btn btn-success btn-sm" data-role="add">
-    <span class="glyphicon glyphicon-plus"></span>
-  </button>
+  <div class="form-group">
+    <button class="form-control btn btn-danger btn-sm input-sm" data-role="remove">
+      -
+    </button>
+    <button class="form-control btn btn-primary btn-sm input-sm" data-role="add">
+      +
+    </button>
+  </div>
 </div>
 
 

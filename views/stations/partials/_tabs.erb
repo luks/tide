@@ -1,10 +1,11 @@
 <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/general">General</a></li>
+    <li class="<%== active == 'general' ? 'active' : '' %>"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/general">General</a></li>
     <% if station.is_reference? %>
-      <li><a data-toggle="ta" href="/stations/<%= station.index %>/edit/constituents">Constituents</a></li>
+    <li class="<%== active == 'constituents' ? 'active' : '' %>"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/constituents">Constituents</a></li>
     <% end %>
     <% if station.is_subordinate? %>
-        <li><a data-toggle="ta" href="/stations/<%= station.index %>/edit/offset">Offset</a></li>
+    <li class="<%== active == 'offset' ? 'active' : '' %>"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/offset">Offset</a></li>
     <% end %>
-  <li><a data-toggle="ta" href="/stations/<%= station.index %>/edit/verbiage">Verbiage</a></li>
+  <li class="<%== active == 'verbiage' ? 'active' : '' %>"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/verbiage">Verbiage</a></li>
+  <li class="<%== active == 'water_level' ? 'active' : '' %>"><a data-toggle="ta" href="/stations/<%= station.index %>/edit/water_level">Water level</a></li>
 </ul>
