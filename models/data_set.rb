@@ -5,6 +5,9 @@ class DataSet < Sequel::Model
   one_to_many :stations, key: :ref_index, class: self
   many_to_one :ref_station, key: :ref_index, class: self
 
+  one_to_many :files, key: :index, class: :StationFile
+  one_to_many :levels, key: :index, class: :WaterLevel
+
   nested_attributes :constants, destroy: true
 
   many_to_many :constituents, left_key: :index, right_key: :name,

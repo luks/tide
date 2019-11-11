@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+
+
+--------------- Scenarion object
+
+
+
+factory - execute given scenarios ( mostly upgrade, mainentance )
+
+all exceptions should be handled.
+
+in case of exceptions script have to give promt and freeze in time 
+
+there should be indicator of succesfull play writen to individual machines ( case when something is fucked )
+
+Indicator:
+
+
+- With each run, script will generat UniqueRunIdentificator, timestamp+ip of machine where script run. On machine and local tmp file.
+
+- When script is done on particular machine it will add suffix done.
+
+- If script failed due x reason - all servers which are done should have sufffix done 1234-10.0.0.13-done
+
+- Run after fucked run
+	- script have to be tuned with same indicator:  avoid: 1234-10.0.0.13-done
+
+- Or script will run over all machines all over again  
+
+- Script have to write 
+
+
+

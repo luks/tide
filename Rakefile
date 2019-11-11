@@ -1,4 +1,48 @@
-# Migrate
+require 'yaml'
+
+SETTINGS = YAML.load_file('./settings/database.yml')
+
+setup_postgres = lambda do |env|
+  if SETTINGS[env.to_sym]
+
+    db_default = SETTINGS[env.to_sym][:db_default]
+    db_sensitive = SETTINGS[env.to_sym][:db_sensitive]
+    sh "psql -U postgres -c \"CREATE USER #{db_default[:user]} PASSWORD '#{db_default[:password]}'\""
+    sh "createdb -U postgres -O #{db_default[:user]} #{db_default[:user]}"
+    sh "psql -U postgres -c \"CREATE EXTENSION postgis\" #{db_default[:database]}"
+  else
+    puts("Please add environment \"#{env}\" to settings/database.yml")
+  end
+end
+
+
+
+unset_postgres = lambda do |env|
+  if SETTINGS[env.to_sym]
+
+    db_default = SETTINGS[env.to_sym][:db_default]
+    sh "dropdb -U postgres #{db_default[:database]}"
+    sh "dropuser -U postgres #{db_default[:user]}"
+
+  else
+    puts("Please add environment \"#{env}\" to settings/database.yml")
+  end
+end
+
+namespace :db do
+
+  desc 'Setup database PostgreSQL'
+  task :set, [:env] do |t, args|
+    setup_postgres.call(args[:env])
+  end
+
+  desc 'Unset database PostgreSQL'
+  task :unset, [:env] do |t, args|
+    unset_postgres.call(args[:env])
+  end
+end
+
+
 
 migrate = lambda do |env, version|
   ENV['RACK_ENV'] = env

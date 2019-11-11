@@ -1,0 +1,22 @@
+:production: &db_prod
+  :db_default: &database
+    :adapter: postgres
+    :host: localhost
+    :port: 5433
+    :database: harmbase2
+    :user: harmbase2
+    :password: harmbase2
+
+:development:
+  <<: *db_prod
+  :db_default: &db_dev
+    <<: *database
+    :user: harmbase2_dev
+    :database: harmbase2_dev
+
+:test:
+  <<: *db_prod
+  :db_default: &db_test
+    <<: *database
+    :user: harmbase2_test
+    :database: harmbase2_test
