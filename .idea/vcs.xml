@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latoto" vcs="Git" />
+    <mapping directory="$USER_HOME$/Seznam/szn-mnemon-web" vcs="Git" />
   </component>
 </project>

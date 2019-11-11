@@ -1,6 +1,7 @@
 require_relative 'db'
 require 'shrine'
 require 'shrine/storage/file_system'
+require 'sidekiq'
 
 if ENV['RACK_ENV'] == 'development'
   Sequel::Model.cache_associations = false
@@ -11,26 +12,26 @@ Sequel::Model.plugin :prepared_statements
 Sequel::Model.plugin :subclasses unless ENV['RACK_ENV'] == 'development'
 
 # Shrine
+#Shrine.plugin :logging
 Shrine.plugin :sequel
-Shrine.plugin :cached_attachment_data # for forms
-Shrine.plugin :rack_file # for non-Rails apps
+Shrine.plugin :cached_attachment_data
+Shrine.plugin :rack_file
 Shrine.plugin :backgrounding
 Shrine.storages = {
-    cache: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/cache'), # temporary
-    store: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/store'), # permanent
+  cache: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/cache'),
+  store: Shrine::Storage::FileSystem.new('public', prefix: 'uploads/store')
 }
 
-Shrine::Attacher.promote { |data| UploadJob.perform_async(data) }
-Shrine::Attacher.delete { |data| DeleteJob.perform_async(data) }
+# Shrine::Attacher.promote { |data| PromoteJob.perform_async(data) }
+# Shrine::Attacher.delete { |data| DeleteJob.perform_async(data) }
 # /Shrine
-
 
 unless defined?(Unreloader)
   require 'rack/unreloader'
-  Unreloader = Rack::Unreloader.new(:reload=>false)
+  Unreloader = Rack::Unreloader.new(reload: false)
 end
 
-Unreloader.require('models'){|f| Sequel::Model.send(:camelize, File.basename(f).sub(/\.rb\z/, ''))}
+Unreloader.require('models') { |f| Sequel::Model.send(:camelize, File.basename(f).sub(/\.rb\z/, '')) }
 
 if ENV['RACK_ENV'] == 'development'
   require 'logger'

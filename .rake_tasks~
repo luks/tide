@@ -1,0 +1,15 @@
+default
+dev_bounce
+dev_down
+dev_irb
+dev_up
+migrate[env,version]
+model_spec
+prod_irb
+prod_up
+pry[env]
+test_bounce
+test_down
+test_irb
+test_up
+web_spec

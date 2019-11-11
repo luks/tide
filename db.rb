@@ -6,7 +6,7 @@ require 'sequel'
 # passed to subprocesses.  DATABASE_URL may contain passwords.
 DB = Sequel.connect(ENV.delete('DATABASE_URL'))
 DB.extension(:pagination)
-DB.extension :pg_array, :pg_interval
+# DB.extension :pg_array, :pg_interval
 
 TIPS = {
   stations_name: 'This is the name of the station.',

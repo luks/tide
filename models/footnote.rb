@@ -1,3 +1,3 @@
-class Footnote < Sequel::Model
-
-end
+# class Footnote < Sequel::Model
+#
+# end

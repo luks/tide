@@ -1,4 +1,53 @@
 <%== render('stations/partials/_breadcrumbs', { locals: { station: @station, active: 'Water Level' } } ) %>
 <%== render('stations/partials/_tabs', { locals: { station: @station, active: 'water_level'  } } ) %>
 
-<h3>Edit water level</h3>
+<h3>Add water level</h3>
+
+<div class="form-inline">
+  <form action="/stations/water_level/add" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="index" value="<%= @station.index %>" />
+    <input type="hidden" name="station_file[index]" value="<%= @station.index %>" />
+    <%== csrf_tag %>
+    <div class="form-group">
+      <input name="station_file[file]" type="file" class="form-control input-sm input-sel-sm" value="<%= @station_file.file %>">
+    </div>
+    <!--<div class="form-group">-->
+      <!--<input name="station_file[from]" class="form-control input-sm input-sel-sm" type="date" value="<%= @station_file.from %>">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+      <!--<input name="station_file[to]" class="form-control input-sm input-sel-sm" type="date" value="<%= @station_file.to %>">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+      <!--<textarea name="station_file[description]" class="form-control" value="<%= @station_file.description %>" ></textarea>-->
+    <!--</div>-->
+    <div class="form-group">
+      <button type="submit" class="btn btn-default btn-sm" >Upload</button>
+    </div>
+  </form>
+</div>
+
+<% if @station.files.count > 0 %>
+  <div class="table-responsive">
+    <table class="table table-striped table-condensed table-hover">
+      <thead>
+      <tr>
+        <td>#</td>
+        <th>From</th>
+        <th>To</th>
+        <!--<th>Description</th>-->
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @station.files.each do |file| %>
+        <tr>
+          <td><%= file.id %></td>
+          <td><%= file.from.strftime("%c") %></td>
+          <td><%= file.to.strftime("%c") %></td>
+          <!--<td><%= file.description %></td>-->
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

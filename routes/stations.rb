@@ -69,6 +69,27 @@ class Tide
       end
     end
 
+    r.on 'water_level' do
+      r.is 'add' do
+        r.get do
+          @station_file = StationFile.new
+          view 'stations/edit_water_level'
+        end
+        r.post do
+          p = params[:station_file]
+          @station = DataSet[p[:index]]
+          @station_file = StationFile.new(p)
+          if @station_file.valid?
+            @station_file.save
+            r.redirect "/stations/#{@station.index}/edit/water_level"
+          else
+            flash.now[:error] = @station_file.errors.full_messages.join(', ')
+            view 'stations/edit_water_level'
+          end
+        end
+      end
+    end
+
     r.on Integer do |index|
       @station = DataSet[index]
       @ref_stations = ReferenceStationView.order(:name)
@@ -114,7 +135,11 @@ class Tide
 
         r.is 'water_level' do
           r.get do
+            @station_file = StationFile.new
             view 'stations/edit_water_level'
+          end
+          r.post do
+
           end
         end
 

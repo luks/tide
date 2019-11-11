@@ -26,7 +26,7 @@ class Tide
     model Constant
     model Constituent
     model DataSet
-    model Footnote
+    # model Footnote
     model SubordinateStationView
   end
 
